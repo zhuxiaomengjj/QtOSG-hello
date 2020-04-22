@@ -180,6 +180,7 @@ int main(int argc, char** argv)
 
     QApplication qapp(argc, argv);
     QMainWindow window;
+	window.resize(QDesktopWidget().availableGeometry(&window).size() * 0.7);
     QtOSGWidget* widget = new QtOSGWidget(&window);
     window.setCentralWidget(widget);
     window.show();
